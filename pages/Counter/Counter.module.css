@@ -1,0 +1,12 @@
+.container{
+    font-size: 30px;
+    text-align: center;
+}
+
+.container button{
+    margin: 10px;
+    font-size: 35px;
+    width: 70px;
+    color: white;
+    background-color: black;
+}

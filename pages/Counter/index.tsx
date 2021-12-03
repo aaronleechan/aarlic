@@ -1,8 +1,8 @@
-import React ,{useEffect, useState} from 'react';
+import React from 'react';
 import { connect,ConnectedProps } from 'react-redux'
-import { decrementCounter,incrementCounter } from '../redux/actions/counterActions'
-import { CounterState } from '../redux/reducers/counterReducer'
-import {RootState} from '../redux/store'
+import { decrementCounter,incrementCounter } from '../../redux/actions/counterActions'
+import {RootState} from '../../redux/store'
+import styles from './Counter.module.css'
 
 type PropsFromRedux = ConnectedProps<typeof connector>;
 
@@ -13,7 +13,7 @@ const Home : React.FC<Props> =(props)=>{
   const {counter} = props;
 
   return(
-    <div>
+    <div className={styles.container}>
       <div>COUNT : {counter}</div>
       <button onClick={()=>props.incrementCounter()}> + </button>
       <button onClick={()=>props.decrementCounter()}> - </button>
