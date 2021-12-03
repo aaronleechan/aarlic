@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect,ConnectedProps } from 'react-redux'
-import { decrementCounter,incrementCounter } from '../../redux/actions/counterActions'
-import {RootState} from '../../redux/store'
+import { decrementCounter,incrementCounter } from '../../components/redux/actions/counterActions'
+import {RootState} from '../../components/redux/store'
 import styles from './Counter.module.css'
 
 type PropsFromRedux = ConnectedProps<typeof connector>;
