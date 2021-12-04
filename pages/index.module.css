@@ -1,0 +1,24 @@
+.container{
+    text-align: center;
+    width: 50%;
+    margin: auto;
+}
+
+.linkContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.linkButton{
+    background: darkgrey;
+    width: 26%;
+    height: 40px;
+    border-radius: 11px;
+    text-align: center;
+    margin: 0px;
+    padding-top: 9px;
+    color: white;
+    position: cursor;
+}

@@ -1,35 +1,38 @@
-import React ,{useEffect, useState} from 'react';
-import { connect,ConnectedProps } from 'react-redux'
-import { decrementCounter,incrementCounter } from '../redux/actions/counterActions'
-import { CounterState } from '../redux/reducers/counterReducer'
-import {RootState} from '../redux/store'
+import React from 'react';
+import Link from 'next/link';
+import styles from './index.module.css'
+import Counter from './Counter';
 
-type PropsFromRedux = ConnectedProps<typeof connector>;
+const PageList = [
+  {title: Counter, link:"/Counter"}
+]
 
-interface Props extends PropsFromRedux{}
+const LandingPage =()=>{
 
-const Home : React.FC<Props> =(props)=>{
-
-  const {counter} = props;
+  let UIRender = () =>{
+    let UI: any[] = []
+    PageList.map((v,i)=>{
+      UI.push(
+        <div key={i} className={styles.linkButton}>
+          <Link href="/Counter">
+            <a>Counter</a>
+          </Link>
+        </div>
+      )
+    })
+    return UI
+  }
 
   return(
-    <div>
-      <div>COUNT : {counter}</div>
-      <button onClick={()=>props.incrementCounter()}> + </button>
-      <button onClick={()=>props.decrementCounter()}> - </button>
+    <div className={styles.container}>
+      <h1 data-cy="header">This is Landing Page</h1>
+      <div className={styles.linkContainer}>
+        {UIRender()}
+      </div>
     </div>
   )
 }
 
-const mapStateToProps = (state: RootState) => ({
-  counter: state.counter.value
-});
 
-const mapDispatchToProps = {
-  decrementCounter: decrementCounter,
-  incrementCounter: incrementCounter
-}
 
-const connector = connect(mapStateToProps,mapDispatchToProps)
-
-export default connector(Home);
+export default LandingPage;

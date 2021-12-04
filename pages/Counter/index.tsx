@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect,ConnectedProps } from 'react-redux'
-import { decrementCounter,incrementCounter } from '../../redux/actions/counterActions'
-import {RootState} from '../../redux/store'
+import { decrementCounter,incrementCounter } from '../../components/redux/actions/counterActions'
+import {RootState} from '../../components/redux/store'
 import styles from './Counter.module.css'
 
 type PropsFromRedux = ConnectedProps<typeof connector>;
@@ -14,9 +14,9 @@ const Home : React.FC<Props> =(props)=>{
 
   return(
     <div className={styles.container}>
-      <div>COUNT : {counter}</div>
-      <button onClick={()=>props.incrementCounter()}> + </button>
-      <button onClick={()=>props.decrementCounter()}> - </button>
+      <div data-cy="counter-header">COUNT : {counter}</div>
+      <button data-cy="counter-increment" onClick={()=>props.incrementCounter()}> + </button>
+      <button data-cy="counter-decrement" onClick={()=>props.decrementCounter()}> - </button>
     </div>
   )
 }
