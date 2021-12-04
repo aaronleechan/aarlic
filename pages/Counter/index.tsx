@@ -14,9 +14,9 @@ const Home : React.FC<Props> =(props)=>{
 
   return(
     <div className={styles.container}>
-      <div>COUNT : {counter}</div>
-      <button onClick={()=>props.incrementCounter()}> + </button>
-      <button onClick={()=>props.decrementCounter()}> - </button>
+      <div data-cy="counter-header">COUNT : {counter}</div>
+      <button data-cy="counter-increment" onClick={()=>props.incrementCounter()}> + </button>
+      <button data-cy="counter-decrement" onClick={()=>props.decrementCounter()}> - </button>
     </div>
   )
 }

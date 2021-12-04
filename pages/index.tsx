@@ -9,20 +9,30 @@ const PageList = [
 
 const LandingPage =()=>{
 
-  return(
-    <div className={styles.container}>
-      <h1>This is Landing Page</h1>
-      <div className={styles.linkContainer}>
-
-        <div className={styles.linkButton}>
+  let UIRender = () =>{
+    let UI: any[] = []
+    PageList.map((v,i)=>{
+      UI.push(
+        <div key={i} className={styles.linkButton}>
           <Link href="/Counter">
             <a>Counter</a>
           </Link>
         </div>
+      )
+    })
+    return UI
+  }
 
+  return(
+    <div className={styles.container}>
+      <h1 data-cy="header">This is Landing Page</h1>
+      <div className={styles.linkContainer}>
+        {UIRender()}
       </div>
     </div>
   )
 }
+
+
 
 export default LandingPage;
