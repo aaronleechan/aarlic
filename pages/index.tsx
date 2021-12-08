@@ -2,9 +2,11 @@ import React from 'react';
 import Link from 'next/link';
 import styles from './index.module.css'
 import Counter from './Counter';
+import CreateEvent from './events';
 
 const PageList = [
-  {title: Counter, link:"/Counter"}
+  {title: "Counter", link:"/Counter"},
+  {title: "Events", link: '/events'}
 ]
 
 const LandingPage =()=>{
@@ -14,8 +16,8 @@ const LandingPage =()=>{
     PageList.map((v,i)=>{
       UI.push(
         <div key={i} className={styles.linkButton}>
-          <Link href="/Counter">
-            <a>Counter</a>
+          <Link href={v.link}>
+            <a>{v.title}</a>
           </Link>
         </div>
       )
