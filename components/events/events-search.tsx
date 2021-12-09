@@ -5,10 +5,25 @@ import ButtonSubmit from '../ui/buttonSubmit';
 import { MutableRefObject, useRef } from 'react';
 
 interface Props{
-    events: FeatureEventsType[]
+    onSearch: (year: string | '', month: string | '') => void;
 }
 
-const EventsSearch: React.FC=()=>{
+const MonthList = [
+    {value: 1, label: "Jan"},
+    {value: 2, label: "Feb"},
+    {value: 3, label: "Mar"},
+    {value: 4, label: "April"},
+    {value: 5, label: "May"},
+    {value: 6, label: "June"},
+    {value: 7, label: "July"},
+    {value: 8, label: "Aug"},
+    {value: 9, label: "Sep"},
+    {value: 10, label: "Oct"},
+    {value: 11, label: "Nov"},
+    {value: 12, label: "Dec"},
+]
+
+const EventsSearch: React.FC<Props>=({onSearch})=>{
     const yearInputRef = useRef() as MutableRefObject<HTMLSelectElement>;
     const monthInputRef = useRef() as MutableRefObject<HTMLSelectElement>;
 
@@ -16,7 +31,7 @@ const EventsSearch: React.FC=()=>{
         e.preventDefault()
         const selectedYear = yearInputRef.current.value;
         const selectedMonth = monthInputRef.current.value;
-        console.log({" selectedYear ": selectedYear},{" selectedMonth ": selectedMonth})
+        onSearch(selectedYear,selectedMonth)
     }
 
     return(
@@ -34,11 +49,16 @@ const EventsSearch: React.FC=()=>{
                <div className={styles.control}>
                 <label htmlFor="month">Month</label>
                 <select id="month" ref={monthInputRef}>
-                    <option value="1">January</option>
+                    {
+                        MonthList.map((v,i)=>{
+                            const {value,label} = v
+                            return(<option key={i} value={value}>{label}</option>)
+                        })
+                    }
                 </select>
                </div>
            </div>
-           <ButtonSubmit>Find Events</ButtonSubmit>
+           <ButtonSubmit>Search</ButtonSubmit>
        </form>
     )
 }
