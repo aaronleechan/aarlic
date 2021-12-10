@@ -2,6 +2,8 @@ import {useRouter} from 'next/router';
 import { getFilteredEvents } from '../../data/dummy-data';
 import EventList from '../../components/events/event-list';
 import Layout from '../../components/layout/layout';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import { faExclamationCircle } from '@fortawesome/free-solid-svg-icons'
 
 function FilterEventPage(){
 
@@ -22,13 +24,13 @@ function FilterEventPage(){
 
     function InvalidFilter(){
         if(isNaN(numYear) || isNaN(numMonth) || numYear > 2030 || numYear < 2021 || numMonth < 1 || numMonth > 12){
-            return <p className="center"> Invalid Filter Please Adjust Your Values! </p>
+            return <p className="error-icon"><FontAwesomeIcon icon={faExclamationCircle}/><span>Invalid Filter Please Adjust Your Values</span></p>
         }
     }
 
     function NoEventUi(){
         if(!filteredEvents || filteredEvents.length == 0){
-            return <p className="center"> No Events Found For The Chosen Filter! </p>
+            return <p className="error-icon"><FontAwesomeIcon icon={faExclamationCircle}/><span>No Events Found For The Chosen Filter!</span></p>
         }  
     }
 

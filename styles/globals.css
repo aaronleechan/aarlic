@@ -19,3 +19,19 @@ a {
   margin: auto;
   text-align: center;
 }
+
+.error-icon{
+  text-align: center;
+  margin: auto;
+  width: 23%;
+  background-color: orangered;
+  height: 47px;
+  color: white;
+  margin-top: 30px;
+  padding-top: 10px;
+  font-size: 20px;
+  border-radius: 5px;
+}
+.error-icon span{
+  margin-left: 30px;
+}
