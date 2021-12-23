@@ -9,10 +9,6 @@ context("Home Page",()=>{
         cy.get('[data-cy=counter-header]').contains("COUNT")
     })
 
-    // it('renders without error',()=>{
-        
-    // })
-
     it('counter starts at 0',()=>{
         cy.get('[data-cy=counter-header]').contains(0)
     })

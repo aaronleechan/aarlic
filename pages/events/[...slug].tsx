@@ -1,7 +1,7 @@
 import {useRouter} from 'next/router';
 import { getFilteredEvents } from '../../data/dummy-data';
 import EventList from '../../components/events/event-list';
-import Layout from '../../components/layout/layout';
+import Layout from '../../components/layout/events/event-layout';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import { faExclamationCircle } from '@fortawesome/free-solid-svg-icons'
 

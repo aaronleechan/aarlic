@@ -35,3 +35,36 @@ a {
 .error-icon span{
   margin-left: 30px;
 }
+
+.down-arrow{
+  border: solid #44464a;
+  border-width: 0 1px 1px 0;
+  display: inline-block;
+  padding: 3px;
+  -webkit-transform: rotate(45deg);
+  margin-left: 5px;
+  vertical-align: text-top;
+  margin-top: 6px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.nav_popover{
+  position: absolute;
+  box-shadow: 0 2px 3px 0 rgb(0 0 0);
+  min-width: 200px;
+  border: 1px solid #E3E3E4;
+  border-top: 1px solid #cfd1d7;
+  background: #f0f0f0;
+  min-height: 50px;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.nav_open{
+  transform: scaleY(1)
+}
+
+.nav_close{
+  transform: scaleY(0)
+}

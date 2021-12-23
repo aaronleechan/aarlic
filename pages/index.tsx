@@ -1,13 +1,9 @@
 import React from 'react';
 import Link from 'next/link';
 import styles from './index.module.css'
-import Counter from './Counter';
-import CreateEvent from './events';
+import MainLayout from '../components/layout/main-header/main-layout';
+import {PageList} from '../data/link-page';
 
-const PageList = [
-  {title: "Counter", link:"/Counter"},
-  {title: "Events", link: '/events'}
-]
 
 const LandingPage =()=>{
 
@@ -17,7 +13,7 @@ const LandingPage =()=>{
       UI.push(
         <div key={i} className={styles.linkButton}>
           <Link href={v.link}>
-            <a>{v.title}</a>
+            <a target="_blank">{v.title}</a>
           </Link>
         </div>
       )
@@ -27,10 +23,10 @@ const LandingPage =()=>{
 
   return(
     <div className={styles.container}>
-      <h1 data-cy="header">This is Landing Page</h1>
-      <div className={styles.linkContainer}>
-        {UIRender()}
-      </div>
+      <MainLayout/>
+        <div className={styles.linkContainer}>
+          {UIRender()}
+        </div>
     </div>
   )
 }

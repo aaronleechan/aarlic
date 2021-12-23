@@ -1,11 +1,11 @@
 import { Fragment } from 'react';
-import MainHeader from './main-header';
+import MainHeader from './event-main-header';
 
 interface Props{
     children?: React.ReactNode;
 }
 
-const Layout: React.FC<Props> = (props) =>{
+const EventLayout: React.FC<Props> = (props) =>{
     return(
         <Fragment>
             <MainHeader/>
@@ -16,4 +16,4 @@ const Layout: React.FC<Props> = (props) =>{
     )
 }
 
-export default Layout
+export default EventLayout
