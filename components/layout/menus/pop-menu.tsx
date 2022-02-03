@@ -50,7 +50,6 @@ const PopMenu: React.FC<Props> = ({menus,label,icon,path}) =>{
                                                 </a>
                                             </Link>
                                         }
-
                                     </li>
                                 )
                             })

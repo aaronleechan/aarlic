@@ -10,9 +10,6 @@ interface Props{
 const MainLayout: React.FC<Props> = ({children}) =>{
     return(
         <div className={styles.navContainer}>
-            <div className={styles.masterhead}>
-                {children}
-            </div>
             <div className={styles.navigation}>
                 <ul className={styles.navigation_list}>
                     {navBarItem.categories.map((category,i)=>{
@@ -26,9 +23,9 @@ const MainLayout: React.FC<Props> = ({children}) =>{
                                 path={path || ''}
                             />
                         )
-
                     })}
                 </ul>
+                <div>{children}</div>
             </div>
         </div>
     )

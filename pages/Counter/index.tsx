@@ -5,8 +5,6 @@ import { decrementCounter,incrementCounter } from '../../components/redux/action
 import {RootState} from '../../components/redux/store'
 import styles from './Counter.module.css'
 
-//'../main-header/main-layout';
-
 type PropsFromRedux = ConnectedProps<typeof connector>;
 
 interface Props extends PropsFromRedux{}

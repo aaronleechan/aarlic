@@ -23,10 +23,11 @@ const LandingPage =()=>{
 
   return(
     <div className={styles.container}>
-      <MainLayout/>
+      <MainLayout>
         <div className={styles.linkContainer}>
-          {UIRender()}
-        </div>
+            {UIRender()}
+          </div>
+      </MainLayout>
     </div>
   )
 }

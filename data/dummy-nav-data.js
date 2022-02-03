@@ -21,15 +21,15 @@ export const navBarItem = {
             ]
         },
         {
-            "label": "Algorithm",
+            "label": "Interview",
             "icon": "faCalculator",
             "active": true,
             "menus":[
                 {
-                    "label": "Events",
+                    "label": "Infinity Scroll",
                     "icon": "faHome",
-                    "active": false,
-                    "path": "/events"
+                    "active": true,
+                    "path": "/interview/InfinityScrollBar"
                 }
             ]
         },
