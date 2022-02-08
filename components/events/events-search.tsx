@@ -1,5 +1,5 @@
 
-import {FeatureEventsType} from '../commons/interfacesType'
+import {FeatureEventsType} from '../commons/Utils/interfacesType'
 import styles from './events-search.module.css'
 import ButtonSubmit from '../ui/buttonSubmit';
 import { MutableRefObject, useRef } from 'react';

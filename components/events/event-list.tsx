@@ -1,5 +1,5 @@
 
-import {FeatureEventsType} from '../commons/interfacesType'
+import {FeatureEventsType} from '../commons/Utils/interfacesType'
 import EventItem from './event-item'
 import styles from './event-item.module.css'
 

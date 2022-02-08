@@ -2,6 +2,7 @@ import React,{useState,useEffect,useRef} from 'react';
 import { connect,ConnectedProps } from 'react-redux';
 import {RootState} from '../../../components/redux/store';
 import classes from './InfinityScrollBar.module.css';
+import {Loaders} from '../../../components/commons'
 
 type PropsFromRedux = ConnectedProps<typeof connector>;
 
@@ -39,9 +40,10 @@ const InfinityScrollBar: React.FC<Props> =(props) =>{
             <div><h2>Infinity Scroll Bar Sample</h2></div>
             <div className={classes.listcontainer} id="scrollBar" ref={scrollBarRef} onScroll={elementScroll}>
                 <ul className={classes.listdisplay}>
-                    {listItem.map((val,i)=><li key={i}>This is List {val}</li>)}
+                    {listItem.map((val,i)=><li className={classes.listCard} key={i}>This is List {val}</li>)}
                 </ul>
-                {fetching && `Loading more list items`}
+                {fetching && <Loaders/>}
+
             </div>
         </div>
 

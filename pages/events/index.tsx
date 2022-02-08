@@ -1,6 +1,6 @@
 import React from 'react'
 import {getAllEvents, getFeaturedEvents} from '../../data/dummy-data';
-import {FeatureEventsType} from '../../components/commons/interfacesType';
+import {FeatureEventsType} from '../../components/commons/Utils/interfacesType';
 import EventList from '../../components/events/event-list';
 import Layout from '../../components/layout/events/event-layout';
 import EventsSearch from '../../components/events/events-search';

@@ -1,12 +1,11 @@
 .container{
     width: 30%;
     text-align: center;
-    margin-top: 50px;
     margin: auto;
 }
 
 .listcontainer{
-    border-radius: 20px;
+    border-radius: 5px;
     border: 1px solid black;
     position: relative;
     overflow: auto;
@@ -15,4 +14,13 @@
 
 .listdisplay{
     list-style-type: none;
+}
+
+.listCard{
+    margin: 5px;
+    width: 90%;
+    background: gainsboro;
+    padding-top: 20px;
+    height: 50px;
+    border-radius: 3px;
 }
